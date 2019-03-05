@@ -1,11 +1,11 @@
 Package: GPSCDF
 Type: Package
 Title: Generalized Propensity Score Cumulative Distribution Function
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
-    person("Derek", "Brown", email= "derek9@gwu.edu", role= c("aut", "cre")),
-    person("Thomas", "Greene", role="aut"),
-    person("Stacia", "DeSantis", role="aut"))
+    person("Derek W.", "Brown", email= "derek9@gwu.edu", role= c("aut", "cre")),
+    person("Thomas J.", "Greene", role="aut"),
+    person("Stacia M.", "DeSantis", role="aut"))
 Description: Implements the generalized propensity score cumulative distribution
     function proposed by Greene (2017)
     <https://digitalcommons.library.tmc.edu/dissertations/AAI10681743/>.
@@ -22,10 +22,10 @@ Imports: dplyr (>= 0.7.6) , nbpMatching (>= 1.5.1), nnet (>= 7.3-12),
 RoxygenNote: 6.1.1
 Suggests: testthat
 NeedsCompilation: no
-Packaged: 2019-02-20 20:17:27 UTC; Abby
-Author: Derek Brown [aut, cre],
-  Thomas Greene [aut],
-  Stacia DeSantis [aut]
-Maintainer: Derek Brown <derek9@gwu.edu>
+Packaged: 2019-03-05 14:41:59 UTC; Abby
+Author: Derek W. Brown [aut, cre],
+  Thomas J. Greene [aut],
+  Stacia M. DeSantis [aut]
+Maintainer: Derek W. Brown <derek9@gwu.edu>
 Repository: CRAN
-Date/Publication: 2019-02-28 14:30:03 UTC
+Date/Publication: 2019-03-05 15:20:18 UTC

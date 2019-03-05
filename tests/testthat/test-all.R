@@ -22,11 +22,11 @@ scores<- rbind(x1,x2,x3,x4,x5,x6)
 
 test_that("tests sum of GPS", {
   scores[6,3]<- 0.5
-  expect_error(GPSCDF(pscores=scores, data=X), "Pscores must add to 1")
+  expect_message(GPSCDF(pscores=scores, data=X), "Ensure pscores sum to 1")
 
 
   scores[6,3]<- 0.3
-  expect_error(GPSCDF(pscores=scores, data=X), "Pscores must add to 1")
+  expect_message(GPSCDF(pscores=scores, data=X), "Ensure pscores sum to 1")
 })
 
 
@@ -70,7 +70,5 @@ test_that("tests GPSCDF greedy matching", {
   expect_error(GPSCDF(pscores=scores, data=X, greedy=TRUE), "Specify a treatment variable to proceed with matching")
   expect_error(GPSCDF(pscores=scores, data=X, trt=X$trt, greedy=TRUE), "Specify Ordinal or Multinomial treatments")
 
-  expect_equal(fit5$grdydistance, 0.1147744, tolerance = 0.00001)
-  expect_equal(fit6$grdydistance, 0.1147744, tolerance = 0.00001)
 })
 

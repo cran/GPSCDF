@@ -256,7 +256,9 @@ GPSCDF<-function(pscores=NULL, data=NULL, trt=NULL, stratify=FALSE, nstrat=5, op
   cpscores<-t(apply(pscores[,], 1,cumsum))
   Z<- seq(1, dim(pscores)[2], by=1)
 
-  if(sum(pscores)/N == 1){
+  if(sum(pscores)/N != 1){
+    message("Ensure pscores sum to 1")
+  }
 
     Znorm<-sort(unique(Z))/max(unique(Z))
     ppar<-rep(0,N)
@@ -481,11 +483,6 @@ GPSCDF<-function(pscores=NULL, data=NULL, trt=NULL, stratify=FALSE, nstrat=5, op
       grdmatch<- NULL
       grddata<- NULL
       grdydistance<-NULL}
-
-
-  } else{
-    stop('Pscores must add to 1')
-  }
 
 
 
